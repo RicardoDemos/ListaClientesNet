@@ -1,0 +1,127 @@
+﻿@model ListaClientesNet.Models.ClienteModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ClienteModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activado)
+        </dt>
+
+        @if(Model.activado.Equals(1))
+            {
+            <dd>
+                Cuenta activada
+            </dd>
+            } else
+            {
+                <dd>
+                    Cuenta sin activar
+                </dd>
+            }
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nacimiento)
+        </dd>
+
+        @if (Model.activado.Equals(1))
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.empresa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.empresa)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.twitter)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.twitter)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.intereses)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.intereses)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.genero)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.genero)
+            </dd>
+
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
