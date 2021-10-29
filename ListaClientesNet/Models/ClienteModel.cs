@@ -38,19 +38,15 @@ namespace ListaClientesNet.Models
         [Required]
         public DateTime nacimiento { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string empresa { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string twitter { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string intereses { get; set; }
 
-        [Required]
         public string genero { get; set; }
     }
 }
